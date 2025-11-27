@@ -2,32 +2,32 @@ import { IsNumber, IsString } from 'class-validator';
 
 export class CreatePlatoDto {
   @IsNumber()
-    codigo: number;
+  codigo: number;
   
   @IsString()
-    nombre: string;
+  nombre: string;
   
   @IsString()
-    descripcion: string;
+  descripcion: string;
   
   @IsString()
-    categoria: string;
+  categoria: string;
   
   @IsNumber()
-    precio: number;
+  precio: number;
   
   @IsNumber()
-    disponible: number;
+  disponible: number;
   
   @IsNumber()
-    tiempo_preparacion_min: number;
+  tiempo_preparacion_min: number;
   
   @IsNumber()
-    calorias: number;
+  calorias: number;
   
   @IsString()
-    es_vegetariano: string;
+  es_vegetariano: string;
   
   @IsNumber()
-    nivel_picante: number;
+  nivel_picante: number;
 }

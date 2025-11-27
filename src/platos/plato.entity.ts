@@ -6,7 +6,7 @@ export class Plato {
   id: string;
 
   @Column()
-  codigo: string;
+  codigo: number;
 
   @Column()
   nombre: string;
@@ -18,20 +18,20 @@ export class Plato {
   categoria: string;
 
   @Column()
-  precio: string;
+  precio: number;
 
   @Column()
-  disponible: string;
+  disponible: number;
 
   @Column()
-  tiempo_preparacion_min: string;
+  tiempo_preparacion_min: number;
 
   @Column()
-  calorias: string;
+  calorias: number;
 
   @Column()
   es_vegetariano: string;
 
   @Column()
-  nivel_picante: string;
+  nivel_picante: number;
 }

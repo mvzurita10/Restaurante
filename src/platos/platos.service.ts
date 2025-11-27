@@ -9,32 +9,32 @@ import { UpdatePlatoDto } from './dto/update-plato.dto';
 export class PlatosService {
   constructor(
     @InjectRepository(Plato)
-    private readonly PlatoRepository: Repository<Plato>,
+    private readonly platoRepository: Repository<Plato>,
   ) {}
 
   create(createPlatoDto: CreatePlatoDto) {
-    const Plato = this.PlatoRepository.create(createPlatoDto);
-    return this.PlatoRepository.save(Plato);
+    const plato = this.platoRepository.create(createPlatoDto);
+    return this.platoRepository.save(plato);
   }
 
   findAll() {
-    return this.PlatoRepository.find();
+    return this.platoRepository.find();
   }
 
   findOne(id: string) {
-    return this.PlatoRepository.findOne({ where: { id } });
+    return this.platoRepository.findOne({ where: { id } });
   }
 
   async update(id: string, updatePlatoDto: UpdatePlatoDto) {
-    const Plato = await this.PlatoRepository.findOne({ where: { id } });
-    if (!Plato) return null;
-    Object.assign(Plato, updatePlatoDto);
-    return this.PlatoRepository.save(Plato);
+    const plato = await this.platoRepository.findOne({ where: { id } });
+    if (!plato) return null;
+    Object.assign(plato, updatePlatoDto);
+    return this.platoRepository.save(plato);
   }
 
   async remove(id: string) {
-    const Plato = await this.PlatoRepository.findOne({ where: { id } });
-    if (!Plato) return null;
-    return this.PlatoRepository.remove(Plato);
+    const plato = await this.platoRepository.findOne({ where: { id } });
+    if (!plato) return null;
+    return this.platoRepository.remove(plato);
   }
 }
